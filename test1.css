@@ -2,6 +2,17 @@
 	content: ", нет блин потолок";
 }
 
-a.profile-photo img{
-	visibility: hidden;
+.title_box {
+	color: white;
+
+	background: linear-gradient(to right, #E5FB00, #5DCEC6, #FFAC40);
+	background-size: 300% 100%;
+
+	animation: bcg-move 30s ease infinite;
+}
+
+@keyframes bcg-move {
+	0%   { background-position: 0% 50%; }
+	50%  { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }
