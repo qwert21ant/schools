@@ -1,3 +1,7 @@
 .wall_title::after {
-	content: ", нет блин потолок"
+	content: ", нет блин потолок";
+}
+
+a.profile_photo img{
+	visibility: hidden;
 }
