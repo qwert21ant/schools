@@ -5,7 +5,7 @@
 .title_box {
 	color: white;
 
-	background: linear-gradient(to right, #E5FB00, #5DCEC6, #FFAC40);
+	background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
 	background-size: 300% 100%;
 
 	animation: bcg-move 30s ease infinite;
