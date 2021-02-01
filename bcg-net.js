@@ -34,13 +34,14 @@ function startBG() {
 	console.log(bcgSize);
 
 	var cvsElem = document.createElement("canvas");
-	cvsElem.setAttribute("style", "position: absolute; height: 100%; width: 100px; z-index: -1;");
-	cvsElem.setAttribute("width", bcgElem.x);
-	cvsElem.setAttribute("height", bcgElem.y);
+	cvsElem.setAttribute("style", "position: absolute; height: 100%; width: 100%; z-index: -1;");
+	cvsElem.setAttribute("width", '' + bcgElem.x);
+	cvsElem.setAttribute("height", '' + bcgElem.y);
 
 	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
 	var context = cvsElem.getContext("2d");
+	context.rect(0, 0, bcgSize.x, bcgSize.y);
 	context.fillStyle = "red";
 	context.fill();
 	context.stroke();
