@@ -22,7 +22,7 @@ for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
 setInterval(() => {
 	for(let i = 0; i < NUM_PARTIC; i++) partics[i].move();
 	
-	
+	console.log('tick');
 }, 10);
 };
 
@@ -47,14 +47,14 @@ class Particle{
 		speed.y = rand(3, 10);
 	}
 	
-	function init(){
+	init(){
 		pos.x = rand(3, 10);
 		pos.y = rand(3, 10);
 		speed.x = rand(3, 10);
 		speed.y = rand(3, 10);
 	}
 	
-	function move(){
+	move(){
 		pos.x += speed.x;
 		pos.y += speed.y;
 		
