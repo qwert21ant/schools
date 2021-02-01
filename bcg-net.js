@@ -37,8 +37,8 @@ function dist(l, r){
 }
 
 class Particle{
-	let pos   = {x: 0.0, y: 0.0};
-	let speed = {x: 0.0, y: 0.0};
+	pos   = {x: 0.0, y: 0.0};
+	speed = {x: 0.0, y: 0.0};
 	
 	constructor(){
 		pos.x = rand(3, 10);
