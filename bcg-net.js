@@ -1,30 +1,6 @@
 var NUM_PARTIC = 300;
 
 /////////
-
-function startBG() {
-
-var bcgElem = document.getElementsByClassName("bg_type0")[0];
-
-var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
-
-var cvsElem = document.createElement("canvas");
-cvsElem.setAttribute("style", "position: absolute; top: 0; left: 0;");
-cvsElem.setAttribute("width", bcgElem.x);
-cvsElem.setAttribute("height", bcgElem.y);
-
-var context = cvsElem.getContext("2d");
-context.fillStyle = "red";
-
-var partics = [];
-for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
-
-setInterval(() => {
-	for(let i = 0; i < NUM_PARTIC; i++) partics[i].move();
-	
-	console.log('tick');
-}, 10);
-
 function rand(min, max){
 	return Math.random() * (max - min) + min;
 }
@@ -60,5 +36,29 @@ class Particle{
 		if(this.pos.x < 0 || this.pos.x > bcgSize.x || this.pos.y < 0 || this.pos.y > bcgSize.y)
 			init();
 	}
-}
+};
+/////////
+
+function startBG() {
+
+var bcgElem = document.getElementsByClassName("bg_type0")[0];
+
+var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
+
+var cvsElem = document.createElement("canvas");
+cvsElem.setAttribute("style", "position: absolute; top: 0; left: 0;");
+cvsElem.setAttribute("width", bcgElem.x);
+cvsElem.setAttribute("height", bcgElem.y);
+
+var context = cvsElem.getContext("2d");
+context.fillStyle = "red";
+
+var partics = [];
+for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
+
+setInterval(() => {
+	for(let i = 0; i < NUM_PARTIC; i++) partics[i].move();
+	
+	console.log('tick');
+}, 10);
 };
