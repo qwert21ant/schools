@@ -30,11 +30,15 @@ function startBG() {
 	var bcgElem = document.getElementsByClassName("bg_type0")[0];
 
 	var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
+	console.log('Canvas size: ');
+	console.log(bcgSize);
 
 	var cvsElem = document.createElement("canvas");
-	cvsElem.setAttribute("style", "position: absolute; top: 0; left: 0;");
+	cvsElem.setAttribute("style", "position: absolute; height: 100%; width: 100px; z-index: -1;");
 	cvsElem.setAttribute("width", bcgElem.x);
 	cvsElem.setAttribute("height", bcgElem.y);
+
+	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
 	var context = cvsElem.getContext("2d");
 	context.fillStyle = "red";
