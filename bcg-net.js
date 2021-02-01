@@ -27,17 +27,15 @@ class Particle{
 };
 
 function startBG() {
-	var bcgElem = document.getElementsByClassName("bg_type0")[0];
+	var bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
 
 	var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
 	console.log('Canvas size: ');
 	console.log(bcgSize);
 
 	var cvsElem = document.createElement("canvas");
-	cvsElem.setAttribute("style", "position: absolute; height: 100%; width: 100%; z-index: -1;");
-	cvsElem.setAttribute("width", '' + bcgElem.x);
-	cvsElem.setAttribute("height", '' + bcgElem.y);
-
+	cvsElem.setAttribute("style", "position: absolute; height: " + bcgSize.y + "px; width: " + bcgSize.x + "px;");
+	
 	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
 	var context = cvsElem.getContext("2d");
