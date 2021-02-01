@@ -42,6 +42,8 @@ function startBG() {
 
 	var context = cvsElem.getContext("2d");
 	context.fillStyle = "red";
+	context.fill();
+	context.stroke();
 
 	var partics = [];
 	for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
