@@ -41,24 +41,24 @@ class Particle{
 	speed = {x: 0.0, y: 0.0};
 	
 	constructor(){
-		pos.x = rand(3, 10);
-		pos.y = rand(3, 10);
-		speed.x = rand(3, 10);
-		speed.y = rand(3, 10);
+		this.pos.x = rand(3, 10);
+		this.pos.y = rand(3, 10);
+		this.speed.x = rand(3, 10);
+		this.speed.y = rand(3, 10);
 	}
 	
 	init(){
-		pos.x = rand(3, 10);
-		pos.y = rand(3, 10);
-		speed.x = rand(3, 10);
-		speed.y = rand(3, 10);
+		this.pos.x = rand(3, 10);
+		this.pos.y = rand(3, 10);
+		this.speed.x = rand(3, 10);
+		this.speed.y = rand(3, 10);
 	}
 	
 	move(){
-		pos.x += speed.x;
-		pos.y += speed.y;
+		this.pos.x += speed.x;
+		this.pos.y += speed.y;
 		
-		if(pos.x < 0 || pos.x > bcgSize.x || pos.y < 0 || pos.y > bcgSize.y)
+		if(this.pos.x < 0 || this.pos.x > this.bcgSize.x || this.pos.y < 0 || this.pos.y > bcgSize.y)
 			init();
 	}
 }
