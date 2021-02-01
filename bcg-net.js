@@ -55,8 +55,8 @@ class Particle{
 	}
 	
 	move(){
-		this.pos.x += speed.x;
-		this.pos.y += speed.y;
+		this.pos.x += this.speed.x;
+		this.pos.y += this.speed.y;
 		
 		if(this.pos.x < 0 || this.pos.x > this.bcgSize.x || this.pos.y < 0 || this.pos.y > bcgSize.y)
 			init();
