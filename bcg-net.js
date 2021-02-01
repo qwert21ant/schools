@@ -24,7 +24,6 @@ setInterval(() => {
 	
 	console.log('tick');
 }, 10);
-};
 
 function rand(min, max){
 	return Math.random() * (max - min) + min;
@@ -62,3 +61,4 @@ class Particle{
 			init();
 	}
 }
+};
