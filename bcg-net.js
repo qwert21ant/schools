@@ -22,7 +22,7 @@ class Particle{
 		this.pos.x += this.speed.x;
 		this.pos.y += this.speed.y;
 		
-		if(this.pos.x < 0 || this.pos.x > bgSize.x || this.pos.y < 0 || this.pos.y > bgSize.y) init();
+		if(this.pos.x < 0 || this.pos.x > bgSize.x || this.pos.y < 0 || this.pos.y > bgSize.y) this.init();
 	}
 };
 
