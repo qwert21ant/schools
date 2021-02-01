@@ -1,8 +1,8 @@
-const NUM_PARTIC = 300;
+var NUM_PARTIC = 300;
 
 /////////
 
-(function(){
+function startBG() {
 
 var bcgElem = document.getElementsByClassName("bg_type0")[0];
 
@@ -15,6 +15,26 @@ cvsElem.setAttribute("height", bcgElem.y);
 
 var context = cvsElem.getContext("2d");
 contest.fillStyle = "red";
+
+var partics = [];
+for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
+
+setInterval({
+	for(let i = 0; i < NUM_PARTIC; i++) partics[i].move();
+	
+	
+}, 10);
+};
+
+function rand(min, max){
+	return Math.random() * (max - min) + min;
+}
+
+function dist(l, r){
+	let d1 = l.x - r.x;
+	let d2 = l.y - r.y;
+	return Math.sqrt(d1*d1 + d2*d2);
+}
 
 class Particle{
 	let pos   = {x: 0.0, y: 0.0};
@@ -41,24 +61,4 @@ class Particle{
 		if(pos.x < 0 || pos.x > bcgSize.x || pos.y < 0 || pos.y > bcgSize.y)
 			init();
 	}
-}
-
-var partics = [];
-for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
-
-setInterval({
-	for(let i = 0; i < NUM_PARTIC; i++) partics[i].move();
-	
-	
-}, 10);
-})();
-
-function rand(min, max){
-	return Math.random() * (max - min) + min;
-}
-
-function dist(l, r){
-	let d1 = l.x - r.x;
-	let d2 = l.y - r.y;
-	return Math.sqrt(d1*d1 + d2*d2);
 }
