@@ -19,7 +19,7 @@ contest.fillStyle = "red";
 var partics = [];
 for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
 
-setInterval((){
+setInterval(() => {
 	for(let i = 0; i < NUM_PARTIC; i++) partics[i].move();
 	
 	
