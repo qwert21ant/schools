@@ -2,6 +2,8 @@ const NUM_PARTIC = 300;
 
 /////////
 
+(function(){
+
 var bcgElem = document.getElementsByClassName("bg_type0")[0];
 
 var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
@@ -49,6 +51,7 @@ setInterval({
 	
 	
 }, 10);
+})();
 
 function rand(min, max){
 	return Math.random() * (max - min) + min;
