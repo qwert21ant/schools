@@ -14,7 +14,7 @@ cvsElem.setAttribute("width", bcgElem.x);
 cvsElem.setAttribute("height", bcgElem.y);
 
 var context = cvsElem.getContext("2d");
-contest.fillStyle = "red";
+context.fillStyle = "red";
 
 var partics = [];
 for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
