@@ -42,7 +42,7 @@ function startBG() {
 
 	var context = cvsElem.getContext("2d");
 
-	var gradient = context.createLinearGradient(0, 0, 10, 10);
+	var gradient = context.createLinearGradient(0, 0, bcgSize.x, bcgSize.y);
 	
 	gradient.addColorStop(0, "gray");
 	gradient.addColorStop(0.3, "yellow");
