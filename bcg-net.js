@@ -45,8 +45,8 @@ function startBG() {
 	var gradient = context.createLinearGradient(0, 0, 10, 10);
 	
 	gradient.addColorStop(0, "gray");
-	gradient.addColorStop(2, "yellow");
-	gradient.addColorStop(7, "red");
+	gradient.addColorStop(0.3, "yellow");
+	gradient.addColorStop(1, "red");
 
 	var partics = [];
 	for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
