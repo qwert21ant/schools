@@ -36,13 +36,13 @@ function startBG() {
 	console.log(bcgSize);
 
 	var cvsElem = document.createElement("canvas");
-	cvsElem.setAttribute("style", "position: absolute; width: 100%; height: 100%;");
+	cvsElem.setAttribute("style", "position: absolute; left: 0; top: 0; width: 100%; height: 100%;");
 	
 	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
 	var context = cvsElem.getContext("2d");
 
-	var gradient = context.createLinearGradient(0, 0, bcgSize.x, bcgSize.y);
+	var gradient = context.createLinearGradient(0, 0, 2, 2);
 	
 	gradient.addColorStop(0, "gray");
 	gradient.addColorStop(1, "yellow");
