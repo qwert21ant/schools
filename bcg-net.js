@@ -38,6 +38,8 @@ function startBG() {
 
 	var cvsElem = document.createElement("canvas");
 	cvsElem.setAttribute("style", "position: absolute; left: 0; top: 0; width: 100%; height: 100%;");
+	cvsElem.setAttribute("width", "" + bcgElem.x);
+	cvsElem.setAttribute("height", "" + bcgElem.y);
 	
 	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
@@ -67,7 +69,7 @@ function startBG() {
 		}
 		
 		console.log('tick');
-	}, 10);
+	}, 100);
 };
 
 function line(ctx, pos1, pos2, alpha){
