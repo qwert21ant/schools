@@ -1,4 +1,5 @@
 var NUM_PARTIC = 300;
+var RANGE = 100;
 var min_speed = 3;
 var max_speed = 10;
 
@@ -60,13 +61,22 @@ function startBG() {
 		for(let i = 0; i < NUM_PARTIC; i++){
 			for(let j = 0; j < NUM_PARTIC; j++){
 				if(i == j) continue;
-				
+				let d = dist(partics[i].pos, partics[j].pos);
+				if(d < RANGE) line(context, partics[i].pos, partics[j].pos, d * 2.55);
 			}
 		}
 		
 		console.log('tick');
 	}, 10);
 };
+
+function line(ctx, pos1, pos2, alpha){
+	ctx.strokeStyle = 'rgba(255, 255, 255, ' + alpha + ')';
+	ctx.beginPath();
+	ctx.moveTo(pos1.x, pos1.y);
+	ctx.lineTo(pos2.x, pos2.y);
+	ctx.stroke();
+}
 
 function rand(min, max){
 	return Math.random() * (max - min) + min;
