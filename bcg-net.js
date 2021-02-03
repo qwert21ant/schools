@@ -7,25 +7,25 @@ class Particle{
 	pos   = {x: 0.0, y: 0.0};
 	speed = {x: 0.0, y: 0.0};
 	
-	constructor(){
-		this.pos.x = rand(min_speed, max_speed);
-		this.pos.y = rand(min_speed, max_speed);
+	constructor(sz){
+		this.pos.x = rand(0, sz.x);
+		this.pos.y = rand(0, sz.y);
 		this.speed.x = rand(min_speed, max_speed);
 		this.speed.y = rand(min_speed, max_speed);
 	}
 	
-	init(){
-		this.pos.x = rand(min_speed, max_speed);
-		this.pos.y = rand(min_speed, max_speed);
+	init(sz){
+		this.pos.x = rand(0, sz.x);
+		this.pos.y = rand(0, sz.y);
 		this.speed.x = rand(min_speed, max_speed);
 		this.speed.y = rand(min_speed, max_speed);
 	}
 	
-	move(bgSize){
+	move(sz){
 		this.pos.x += this.speed.x;
 		this.pos.y += this.speed.y;
 		
-		if(this.pos.x < 0 || this.pos.x > bgSize.x || this.pos.y < 0 || this.pos.y > bgSize.y) this.init();
+		if(this.pos.x < 0 || this.pos.x > sz.x || this.pos.y < 0 || this.pos.y > sz.y) this.init(sz);
 	}
 };
 
@@ -52,7 +52,7 @@ function startBG() {
 	gradient.addColorStop(1, "red");
 
 	var partics = [];
-	for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle());
+	for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle(bcgSize));
 
 	setInterval(() => {
 		for(let i = 0; i < NUM_PARTIC; i++) partics[i].move(bcgSize);
