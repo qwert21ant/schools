@@ -31,7 +31,7 @@ class Particle{
 	}
 };
 
-function startBG() {
+async function startBG() {
 	var bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
 
 	var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
