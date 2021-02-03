@@ -38,8 +38,8 @@ function startBG() {
 
 	var cvsElem = document.createElement("canvas");
 	cvsElem.setAttribute("style", "position: absolute; left: 0; top: 0; width: 100%; height: 100%;");
-	cvsElem.setAttribute("width", bcgElem.x.toString());
-	cvsElem.setAttribute("height", bcgElem.y.toString());
+	cvsElem.setAttribute("width", bcgSize.x.toString());
+	cvsElem.setAttribute("height", bcgSize.y.toString());
 	
 	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
