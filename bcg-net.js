@@ -64,7 +64,7 @@ function startBG() {
 			for(let j = 0; j < NUM_PARTIC; j++){
 				if(i == j) continue;
 				let d = dist(partics[i].pos, partics[j].pos);
-				if(d < RANGE) line(context, partics[i].pos, partics[j].pos, d * 2.55);
+				if(d < RANGE) line(context, partics[i].pos, partics[j].pos, (100 - d) * 2.55);
 			}
 		}
 		
