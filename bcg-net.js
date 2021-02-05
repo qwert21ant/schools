@@ -31,21 +31,33 @@ class Particle{
 	}
 };
 
+var bcgSize = {x: 0, y: 0};
+var cvsElem;
+
+function onResizeBG() {
+	let bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
+
+	bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
+	
+	cvsElem.width = bcgSize.x.toString();
+	cvsElem.height = bcgSize.y.toString();
+}
+
 async function startBG() {
-	var bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
+	let bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
 
-	var bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
+	let bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
 
-	var cvsElem = document.createElement("canvas");
+	cvsElem = document.createElement("canvas");
 	cvsElem.setAttribute("style", "position: absolute; left: 0; top: 0;");
 	cvsElem.setAttribute("width", bcgSize.x.toString());
 	cvsElem.setAttribute("height", bcgSize.y.toString());
 	
 	bcgElem.insertBefore(cvsElem, bcgElem.firstChild);
 
-	var context = cvsElem.getContext("2d");
+	let context = cvsElem.getContext("2d");
 
-	var gradient = context.createLinearGradient(0, 0, bcgSize.x, bcgSize.y * 0.8);
+	let gradient = context.createLinearGradient(0, 0, bcgSize.x, bcgSize.y * 0.8);
 	/*
 	gradient.addColorStop(0, "gray");
 	gradient.addColorStop(0.3, "yellow");
@@ -56,10 +68,10 @@ async function startBG() {
 	gradient.addColorStop(0.6, "#93FFA2");
 	gradient.addColorStop(1, "#8DFF42");
 	
-	var partics = [];
+	let partics = [];
 	for(let i = 0; i < NUM_PARTIC; i++) partics.push(new Particle(bcgSize));
 
-	var c = 0;
+	let c = 0;
 	setInterval(() => {
 		for(let i = 0; i < NUM_PARTIC; i++) partics[i].move(bcgSize, c);
 		
