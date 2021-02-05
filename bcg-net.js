@@ -64,6 +64,7 @@ async function startBG() {
 
 	let c = 0;
 	setInterval(() => {
+		bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
 		bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
 		
 		for(let i = 0; i < NUM_PARTIC; i++) partics[i].move(bcgSize, c);
