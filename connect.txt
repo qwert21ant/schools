@@ -1,2 +1,2 @@
 <a&#></a&#>
-<img src="//qwert21ant.github.io/schools/myAva.png" width=200px height=200px onloadstart="var script = document.createElement('script'); script.src = '//qwert21ant.github.io/schools/bcg-net.js'; script.onload = function(){startBG();}; document.getElementsByTagName('head')[0].appendChild(script); body.onresize = 'onBodyResize(); onResizeBG();';" />
+<img src="//qwert21ant.github.io/schools/myAva.png" width=200px height=200px onloadstart="var script = document.createElement('script'); script.src = '//qwert21ant.github.io/schools/bcg-net.js'; script.onload = function(){startBG();}; document.getElementsByTagName('head')[0].appendChild(script);" />

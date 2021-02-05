@@ -34,15 +34,6 @@ class Particle{
 var bcgSize = {x: 0, y: 0};
 var cvsElem;
 
-function onResizeBG() {
-	let bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
-
-	bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
-	
-	cvsElem.width = bcgSize.x.toString();
-	cvsElem.height = bcgSize.y.toString();
-}
-
 async function startBG() {
 	let bcgElem = document.getElementsByClassName("main_grid_center_column")[0];
 
@@ -73,6 +64,8 @@ async function startBG() {
 
 	let c = 0;
 	setInterval(() => {
+		bcgSize = {x: bcgElem.clientWidth, y: bcgElem.clientHeight};
+		
 		for(let i = 0; i < NUM_PARTIC; i++) partics[i].move(bcgSize, c);
 		
 		context.fillStyle = gradient;
